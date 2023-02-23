@@ -11,7 +11,7 @@ class ContactUsController extends Controller
      */
     public function index()
     {
-        return 'Contact: indrayanadian7@gmail.com';
+        echo '<h1>Contact: indrayanadian7@gmail.com</h1>';
     }
 
     /**
