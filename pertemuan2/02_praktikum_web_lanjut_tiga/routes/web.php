@@ -26,7 +26,7 @@ Route::prefix('category')->group(function () {
 
 //Number 3
 Route::get('/news/{title?}', function ($title = null) {
-    return $title;
+    return "News ".$title;
 });
 
 // Number 4
