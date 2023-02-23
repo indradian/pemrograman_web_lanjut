@@ -11,7 +11,7 @@ class ContactUsController extends Controller
      */
     public function index()
     {
-        echo '<h1>Contact: indrayanadian7@gmail.com</h1>';
+       return view('contact-us');
     }
 
     /**
@@ -27,7 +27,15 @@ class ContactUsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $name = $request->name;
+        $email = $request->email;
+        $message = $request->message;
+
+        echo '<h2>Thanks for Contacting Us</h2>';
+        echo '<h3>Your Message Has Been Sent</h3>';
+        echo 'Name: ' . $name . '<br>';
+        echo 'Email: ' . $email . '<br>';
+        echo 'Message: ' . $message . '<br>';
     }
 
     /**
@@ -35,7 +43,7 @@ class ContactUsController extends Controller
      */
     public function show(string $id)
     {
-        return "tampil " .$id;
+        //
     }
 
     /**

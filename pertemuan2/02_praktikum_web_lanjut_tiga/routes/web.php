@@ -48,4 +48,4 @@ Route::get('/about-us', function () {
 });
 
 //Number 6
-Route::resource('contact-us', ContactUsController::class)->only('index');
+Route::resource('contact-us', ContactUsController::class)->only(['index', 'store']);
