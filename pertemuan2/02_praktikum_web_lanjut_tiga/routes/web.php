@@ -2,17 +2,46 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
+// Number 1
 Route::get('/', function () {
-    return view('welcome');
+    return 'Tampilan Home Awal Website';
+});
+
+// Number 2
+Route::prefix('category')->group(function () {
+    Route::get('/marbel-edu-games', function () {
+        return "Marbel Edu Games";
+    });
+    Route::get('/marbel-and-friends-kids-games', function () {
+        return "Marbel and Friends Kids Games";
+    });
+    Route::get('/riri-story-books', function () {
+        return "Riri Story Books";
+    });
+    Route::get('/kolak-kids-songs', function () {
+        return "Kolak Kids Songs";
+    });
+});
+
+//Number 3
+Route::get('/news/{title?}', function ($title = null) {
+    return $title;
+});
+
+// Number 4
+Route::prefix('program')->group(function () {
+    Route::get('/karir', function () {
+        return "Karir Politeknik Negeri Malang";
+    });
+    Route::get('/magang', function () {
+        return "Magang Politeknik Negeri Malang";
+    });
+    Route::get('/kunjungan-industri', function () {
+        return "Kunjungan Insustri Politeknik Negeri Malang";
+    });
+}); 
+
+// Number 5
+Route::get('/about-us', function () {
+    return 'About Our Company';
 });
