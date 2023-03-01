@@ -36,13 +36,15 @@ Route::get('/news/{title?}', function ($title = null) {
 //Number 4
 Route::prefix('program')->group(function () {
     Route::get('/karir', function () {
-        return view('progra')
-            ->with('name','Marbel And Friends Kids Games');
+        return view('program')
+            ->with('name','Karir Politeknik Negeri Malang');
     });
     Route::get('/magang', function () {
-        return "Magang Politeknik Negeri Malang";
+        return view('program')
+        ->with('name','Magang Politeknik Negeri Malang');
     });
     Route::get('/kunjungan-industri', function () {
-        return "Kunjungan Insustri Politeknik Negeri Malang";
+        return view('program')
+        ->with('name','Kunjungan Industri Politeknik Negeri Malang');
     });
 }); 
