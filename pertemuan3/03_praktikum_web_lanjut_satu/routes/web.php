@@ -48,3 +48,8 @@ Route::prefix('program')->group(function () {
         ->with('name','Kunjungan Industri Politeknik Negeri Malang');
     });
 }); 
+
+//Number 5
+Route::get('/about-us', function () {
+    return view('about-us');
+});
