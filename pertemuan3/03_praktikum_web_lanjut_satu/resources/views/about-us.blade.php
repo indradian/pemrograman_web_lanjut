@@ -7,6 +7,6 @@
   <title>About Us</title>
 </head>
 <body>
-  <h1>Tampilan About Us</h1>
+  <h1>Tampilan About Us: Our Website</h1>
 </body>
 </html>
