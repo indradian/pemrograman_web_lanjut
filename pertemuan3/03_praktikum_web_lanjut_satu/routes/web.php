@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactUsController;
 
 // Number 1
 Route::get('/', function () {
@@ -53,3 +54,6 @@ Route::prefix('program')->group(function () {
 Route::get('/about-us', function () {
     return view('about-us');
 });
+
+//Number 6
+Route::resource('contact-us', ContactUsController::class)->only(['index', 'store']);
