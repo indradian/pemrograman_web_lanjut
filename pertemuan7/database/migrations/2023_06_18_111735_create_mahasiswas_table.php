@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('mahasiswas', function (Blueprint $table) {
-            $table->string('nim', 20)->unique()->primary();
-            $table->string('nama', 50);
-            $table->string('kelas', 10);
-            $table->string('jurusan', 50);
-            $table->string('no_handphone', 13);
+            $table->string('Nim', 20)->unique()->primary();
+            $table->string('Nama', 50);
+            $table->string('Kelas', 10);
+            $table->string('Jurusan', 50);
+            $table->string('No_Handphone', 13);
             $table->timestamps();
         });
     }
