@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
-        return 'Selamat Datang';
+        $user = auth()->user();
+        return view('home', ['user' => $user]);
     }
 }
